@@ -95,18 +95,22 @@ loader.addServiceCompiler(Object.assign(
 
 ### Extend Compiler
 
+`loader.addExtendCompiler(property, file, options)`
+
 **Arguments:**
 
 - `property` <string> the name of extending
 - `filecallback` <function> hwo to get dir by arg of dir?
 - `options` <object>
-  - `target` which object can been built on?
-  - `inject` inject object
-  - `override` can override properties?
-  - `originalPrototypes` original prototypes from koa or other framework
-- ...args
+ * `target` which object can been built on?
+ * `inject` inject object
+ * `override` can override properties?
+ * `originalPrototypes` original prototypes from koa or other framework
 
-it also has four custom methods by alias name:
+
+
+
+It also has four custom methods by alias name:
 
 In KOA:
 
