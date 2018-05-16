@@ -100,7 +100,7 @@ loader.addServiceCompiler(Object.assign(
 **Arguments:**
 
 - `property` <string> the name of extending
-- `filecallback` <function> hwo to get dir by arg of dir?
+- `filecallback` <function> how to get dir by arg of dir?
 - `options` <object>
  * `target` which object can been built on?
  * `inject` inject object
@@ -125,6 +125,24 @@ this.loader
   .addRequestCompiler(this.extendCondition(this.app.request, scope, 'extend/request.js'))
   .addResponseCompiler(this.extendCondition(this.app.response, scope, 'extend/response.js'))
   .addApplicationCompiler(this.extendCondition(this.app, scope, 'extend/application.js'));
+```
+
+### Message Compiler
+
+On agent you should add this compiler for ipc sender.
+
+`this.loader.addMessageCompiler(inject, fileCallback)`;
+
+**Arguments:**
+
+- `inject` inject object
+- `fileCallback` <function> hwo to get dir by arg of dir?
+
+```javascript
+this.loader.addMessageCompiler(this.app, ({ type, pathname }) => {
+  if (type === 'project') return path.resolve(pathname, `app/${this.app.name}.js`);
+  return path.resolve(pathname, 'app/message.js');
+});
 ```
 
 # License
