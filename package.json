@@ -1,0 +1,29 @@
+{
+  "name": "@reinjs/rein-loader",
+  "version": "1.0.0",
+  "description": "rein framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=dev node test/index.js --service.name=rein-cluster-test --service.tag=dev --service.port=8080",
+    "pub": "npm publish --access=public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/reinjs/rein-loader.git"
+  },
+  "keywords": [
+    "loader"
+  ],
+  "author": "reinjs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reinjs/rein-loader/issues"
+  },
+  "homepage": "https://github.com/reinjs/rein-loader#readme",
+  "dependencies": {
+    "@reinjs/rein-utils": "^1.0.0",
+    "globby": "^8.0.1",
+    "is-type-of": "^1.2.0",
+    "utility": "^1.13.1"
+  }
+}
