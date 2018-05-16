@@ -104,6 +104,7 @@ loader.addServiceCompiler(Object.assign(
   - `inject` inject object
   - `override` can override properties?
   - `originalPrototypes` original prototypes from koa or other framework
+- ...args
 
 it also has four custom methods by alias name:
 
